@@ -1,7 +1,10 @@
 package aims;
 
 public class DigitalVideoDisc {
-    private String title;
+	private static int nbDigitalVideoDiscs = 0;
+	
+	private int id;
+	private String title;
     private String category;
     private String director;
     private int length;
@@ -10,6 +13,8 @@ public class DigitalVideoDisc {
     // Constructor 1: title only
     public DigitalVideoDisc(String title) {
         this.title = title;
+        nbDigitalVideoDiscs++;
+        this.id = nbDigitalVideoDiscs;
     }
 
     // Constructor 2: title, category, cost
@@ -17,6 +22,8 @@ public class DigitalVideoDisc {
         this.title = title;
         this.category = category;
         this.cost = cost;
+        nbDigitalVideoDiscs++;
+        this.id = nbDigitalVideoDiscs;
     }
 
     // Constructor 3: title, category, director, cost
@@ -25,6 +32,8 @@ public class DigitalVideoDisc {
         this.category = category;
         this.director = director;
         this.cost = cost;
+        nbDigitalVideoDiscs++;
+        this.id = nbDigitalVideoDiscs;
     }
 
     // Constructor 4: full
@@ -34,6 +43,8 @@ public class DigitalVideoDisc {
         this.director = director;
         this.length = length;
         this.cost = cost;
+        nbDigitalVideoDiscs++;
+        this.id = nbDigitalVideoDiscs;
     }
 
     public String getTitle() {
